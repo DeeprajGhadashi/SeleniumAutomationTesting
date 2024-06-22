@@ -12,9 +12,13 @@ public class CSSLocators {
 	    driver.manage().window().maximize();
 	    
 	    //tag&id 
-	    driver.findElement(By.cssSelector("input#small-searchterms")).sendKeys("T-shirts");
+	    //driver.findElement(By.cssSelector("input#small-searchterms")).sendKeys("T-shirts");
 	 // driver.findElement(By.cssSelector("small-searchterms")).sendKeys("T-shirts");
 	    
+	    
+	    //tag class tag.className
+	    driver.findElement(By.cssSelector("input.search-box-text")).sendKeys("T-shirts");
+	 // driver.findElement(By.cssSelector(".search-box-text")).sendKeys("T-shirts");
 	    
 	}
 
