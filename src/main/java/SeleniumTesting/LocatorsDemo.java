@@ -13,8 +13,13 @@ public class LocatorsDemo {
 	    driver.manage().window().maximize();
 	    
 	    //name
-	    driver.findElement(By.name("search")).sendKeys("Macbook");
+	   // driver.findElement(By.name("search")).sendKeys("Macbook");
 
+	    //id
+	    boolean logoDisplaystatus= driver.findElement(By.id("logo")).isDisplayed();
+	    System.out.println(logoDisplaystatus);
+	    
+	    
 	}
 
 }
