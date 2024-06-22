@@ -16,14 +16,14 @@ public class LocatorsDemo {
 	    driver.manage().window().maximize();
 	    
 	    //name
-	   // driver.findElement(By.name("search")).sendKeys("Macbook");
+	    driver.findElement(By.name("search")).sendKeys("Macbook");
 
 	    //id
-	    //boolean logoDisplaystatus= driver.findElement(By.id("logo")).isDisplayed();
-	    //System.out.println(logoDisplaystatus);
+	    boolean logoDisplaystatus= driver.findElement(By.id("logo")).isDisplayed();
+	    System.out.println(logoDisplaystatus);
 	    
 	    //linkText & partialLinkText
-	    //driver.findElement(By.linkText("Tablets")).click();
+	    driver.findElement(By.linkText("Tablets")).click();
 	    //driver.findElement(By.partialLinkText("Tab")).click()List<A>    
 	    
 	    //className
