@@ -12,9 +12,15 @@ public class XPathDemo {
 	    driver.manage().window().maximize();
 	    
 	    //Xpath with single attribute
-	    driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("Tshirts");
+	   // driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("Tshirts");
 	    
+	  //Xpath with multiple attribute
+	  //  driver.findElement(By.xpath("//input[@placeholder='Search'][@name='search']")).sendKeys("Tshirts");
 
+	  //Xpath with 'and' operator
+	    driver.findElement(By.xpath("//input[@placeholder='Search' and @name='search']")).sendKeys("Tshirts");
+
+	  
 	}
 
 }
