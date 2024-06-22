@@ -29,6 +29,16 @@ public class LocatorsDemo {
 	    //className
 	    List <WebElement>  headerLinks = driver.findElements(By.className("list-inline-item"));
 	    System.out.println("Total number of header links : " + headerLinks.size());
+	    
+	    //tageName
+	    List <WebElement>  Links = driver.findElements(By.tagName("a"));
+	    System.out.println("Total number of header links : " + Links.size());
+	    
+	    List <WebElement>  images = driver.findElements(By.tagName("img"));
+	    System.out.println("Total number of header links : " + images.size());
+	    
+	    
+	    
 	}
 
 }
