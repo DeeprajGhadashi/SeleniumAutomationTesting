@@ -16,9 +16,12 @@ public class LocatorsDemo {
 	   // driver.findElement(By.name("search")).sendKeys("Macbook");
 
 	    //id
-	    boolean logoDisplaystatus= driver.findElement(By.id("logo")).isDisplayed();
-	    System.out.println(logoDisplaystatus);
+	    //boolean logoDisplaystatus= driver.findElement(By.id("logo")).isDisplayed();
+	    //System.out.println(logoDisplaystatus);
 	    
+	    //linktext & partialLinkText
+	    driver.findElement(By.linkText("Tablets")).click();
+	    //driver.findElement(By.partialLinkText("Tab")).click();
 	    
 	}
 
