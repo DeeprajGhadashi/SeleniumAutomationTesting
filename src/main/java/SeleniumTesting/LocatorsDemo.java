@@ -24,7 +24,7 @@ public class LocatorsDemo {
 	    
 	    //linkText & partialLinkText
 	    driver.findElement(By.linkText("Tablets")).click();
-	    //driver.findElement(By.partialLinkText("Tab")).click()List<A>    
+	    //driver.findElement(By.partialLinkText("Tab")).click();    
 	    
 	    //className
 	    List <WebElement>  headerLinks = driver.findElements(By.className("list-inline-item"));
