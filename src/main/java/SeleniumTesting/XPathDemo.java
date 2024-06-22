@@ -15,12 +15,13 @@ public class XPathDemo {
 	   // driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("Tshirts");
 	    
 	  //Xpath with multiple attribute
-	    driver.findElement(By.xpath("//input[@placeholder='Search'][@name='search']")).sendKeys("Tshirts");
+	   // driver.findElement(By.xpath("//input[@placeholder='Search'][@name='search']")).sendKeys("Tshirts");
 
 	  //Xpath with 'and' operator
-	    driver.findElement(By.xpath("//input[@placeholder='Search' and @name='search']")).sendKeys("Tshirts");
+	    //driver.findElement(By.xpath("//input[@placeholder='Search' and @name='search']")).sendKeys("Tshirts");
 
-	 
+	   //Xpath with 'or' operator
+		 driver.findElement(By.xpath("//input[@placeholder='Search'or @name='search']")).sendKeys("Tshirts");
 	}
 
 }
