@@ -1,8 +1,11 @@
 package SeleniumTesting;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class LocatorsDemo {
 
@@ -19,10 +22,13 @@ public class LocatorsDemo {
 	    //boolean logoDisplaystatus= driver.findElement(By.id("logo")).isDisplayed();
 	    //System.out.println(logoDisplaystatus);
 	    
-	    //linktext & partialLinkText
-	    driver.findElement(By.linkText("Tablets")).click();
-	    //driver.findElement(By.partialLinkText("Tab")).click();
+	    //linkText & partialLinkText
+	    //driver.findElement(By.linkText("Tablets")).click();
+	    //driver.findElement(By.partialLinkText("Tab")).click()List<A>    
 	    
+	    //className
+	    List <WebElement>  headerLinks = driver.findElements(By.className("list-inline-item"));
+	    System.out.println("Total number of header links : " + headerLinks.size());
 	}
 
 }
