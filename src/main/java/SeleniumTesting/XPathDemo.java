@@ -24,12 +24,16 @@ public class XPathDemo {
 		// driver.findElement(By.xpath("//input[@placeholder='Search'or @name='search']")).sendKeys("Tshirts");
 		 
 	   //Xpath with text() - inner text
-		boolean displaystatus = driver.findElement(By.xpath("//h3[text()='Featured']")).isDisplayed();
+	/*  boolean displaystatus = driver.findElement(By.xpath("//h3[text()='Featured']")).isDisplayed();
 		System.out.println(displaystatus);
 		
 		String value = driver.findElement(By.xpath("//h3[text()='Featured']")).getText();
 		System.out.println(value);
-		
+	 */
+	    
+	    // Xpath with contains()
+	    driver.findElement(By.xpath("//input[contains(@placeholder,'Sea')]")).sendKeys("Tshirts");
+	    
 		
 	}
 
