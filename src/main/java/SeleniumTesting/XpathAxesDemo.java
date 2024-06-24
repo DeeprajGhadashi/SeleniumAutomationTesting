@@ -26,9 +26,17 @@ public class XpathAxesDemo {
 	    //String text = driver.findElement(By.xpath("//a[contains(text(),'L&T')]/parent::td")).getText();
 	    //System.out.println("Self : " + text);  // L&T
 	    
-	    //Child - Selector al  children of the current node (One or many)
-	    List <WebElement> childs = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/child::td"));
-	    System.out.println("Number of Child elements : " + childs.size()); //6
+	    //Child - Selector all  children of the current node (One or many)
+	    //List <WebElement> childs = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/child::td"));
+	    //System.out.println("Number of Child elements : " + childs.size()); //6
+	
+	    //Ancestor - Selects all ancestors (parents, grandparents ,etc.)
+	    String text = driver.findElement(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr")).getText();
+	    System.out.println("Ancestor : " + text); 
+	
+	
+	
+	
 	}
 
 }
