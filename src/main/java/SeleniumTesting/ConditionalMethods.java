@@ -23,9 +23,25 @@ public class ConditionalMethods {
 	    //System.out.println("Display status : " + status);
 	    
 	    //isEnabled()
-	     boolean status = driver.findElement(By.xpath("//input[@id='gender-male']")).isEnabled();
-	     System.out.println("Enable status : " + status);
+	    // boolean status = driver.findElement(By.xpath("//input[@id='gender-male']")).isEnabled();
+	     //System.out.println("Enable status : " +  status);
 	    
+	     //isSelected
+	     WebElement male_rb = driver.findElement(By.xpath("//input[@id='gender-male']"));
+	     WebElement female_rb = driver.findElement(By.xpath("//input[@id='gender-female']")); 
+	     
+	     System.out.println("Before selection........");
+	     System.out.println(male_rb.isSelected());   //false
+	     System.out.println(female_rb.isSelected());  //false
+	     
+	     System.out.println("");
+	     male_rb.click();  //select male radio button
+	     
+	     System.out.println(male_rb.isSelected());  //true
+	     System.out.println(female_rb.isSelected());  //false
+	     
+	     
+	     
 	}
 
 }
