@@ -39,9 +39,13 @@ public class XpathAxesDemo {
 	   // System.out.println("Number of descendants nodes : " + descendants.size()); //10
 	
 	    //Following - Selects everything in the document after the closing tag of the current node
-	    List <WebElement>  followingnodes  = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/following::*"));
-	    System.out.println("Number of following nodes : " + followingnodes.size()); // 778 
-	   
+	    //List <WebElement>  followingnodes  = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/following::tr"));
+	    //System.out.println("Number of following nodes : " + followingnodes.size()); //55
+	
+	    //Precdeding - Selector all nodes that appear before the current node in the document
+	    List <WebElement> precedings  = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/preceding::tr"));
+	    System.out.println("Number of precedings nodes : " + precedings.size()); //277
+	
 	
 	}
 
