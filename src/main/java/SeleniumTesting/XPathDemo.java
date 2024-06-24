@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 public class XPathDemo {
 
 	public static void main(String[] args) {
@@ -32,9 +34,11 @@ public class XPathDemo {
 	 */
 	    
 	    // Xpath with contains()
-	    driver.findElement(By.xpath("//input[contains(@placeholder,'Sea')]")).sendKeys("Tshirts");
+	    //driver.findElement(By.xpath("//input[contains(@placeholder,'Sea')]")).sendKeys("Tshirts");
 	    
-		
+		//chained Xpath
+	    boolean status = driver.findElement(By.xpath("//div[@id='logo']/a/img")).isDisplayed();
+	    System.out.println(status);
 	}
 
 }
