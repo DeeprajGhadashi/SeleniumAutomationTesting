@@ -14,7 +14,11 @@ public class XpathAxesDemo {
 	    driver.manage().window().maximize();
 	    
 	    //Self - Selects the current node
-	    String text = driver.findElement(By.xpath("//a[contains(text(),'L&T')]/self::a")).getText();
+	   // String text = driver.findElement(By.xpath("//a[contains(text(),'L&T')]/self::a")).getText();
+	    //System.out.println("Self : " + text);  // L&T
+	    
+	    //Parent - Selector the parent of the current node (always One)
+	    String text = driver.findElement(By.xpath("//a[contains(text(),'L&T')]/parent::td")).getText();
 	    System.out.println("Self : " + text);  // L&T
 	    
 	}
