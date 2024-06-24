@@ -46,13 +46,13 @@ public class XpathAxesDemo {
 	    //List <WebElement> precedings  = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/preceding::tr"));
 	    //System.out.println("Number of preceding nodes : " + precedings.size()); //277
 	
-	    //Following-sibling - Selects all siblings after the cure  
-	    List <WebElement>  followingsibling   = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/following-sibling::tr"));
-	    System.out.println("Number of following Siblings : " + followingsibling.size()); //53
+	    //Following-sibling - Selects all siblings after the node  
+	    //List <WebElement>  followingsibling   = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/following-sibling::tr"));
+	    //System.out.println("Number of following Siblings : " + followingsibling.size()); //53
 	
-	    //Preceding - Selector all nodes that appear before the current node in the document
-	    //List <WebElement> precedingsiblings  = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/preceding-sibling::tr"));
-	    //System.out.println("Number of preceding sibling nodes : " + precedingsiblings.size()); //276
+	    //Preceding - Selects all siblings after the node
+	    List <WebElement> precedingsiblings  = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/preceding-sibling::tr"));
+	    System.out.println("Number of preceding sibling nodes : " + precedingsiblings.size()); //276
 	    
 	}
 
