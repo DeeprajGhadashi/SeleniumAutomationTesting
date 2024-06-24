@@ -14,13 +14,17 @@ public class ConditionalMethods {
 	    
 	    //isDisplayed()
 	    
-	    WebElement logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
-	    System.out.println("Display status of logo : " + logo.isDisplayed());
+	    //WebElement logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
+	    //System.out.println("Display status of logo : " + logo.isDisplayed());
 	    
 	    //OR
 	    
-	    boolean status = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']")).isDisplayed();
-	    System.out.println("Display status : " + status);
+	    // boolean status = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']")).isDisplayed();
+	    //System.out.println("Display status : " + status);
+	    
+	    //isEnabled()
+	     boolean status = driver.findElement(By.xpath("//input[@id='gender-male']")).isEnabled();
+	     System.out.println("Enable status : " + status);
 	    
 	}
 
