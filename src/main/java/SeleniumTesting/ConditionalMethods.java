@@ -27,7 +27,7 @@ public class ConditionalMethods {
 	     //System.out.println("Enable status : " +  status);
 	    
 	     //isSelected()
-	     WebElement male_rb = driver.findElement(By.xpath("//input[@id='gender-male']"));
+	   /*  WebElement male_rb = driver.findElement(By.xpath("//input[@id='gender-male']"));
 	     WebElement female_rb = driver.findElement(By.xpath("//input[@id='gender-female']")); 
 	     
 	     System.out.println("Before selection........");
@@ -47,7 +47,11 @@ public class ConditionalMethods {
 	     
 	     System.out.println(male_rb.isSelected());  //false
 	     System.out.println(female_rb.isSelected());  //true       
-	  
+	  */
+	    
+	     //Checkbox you can select single as well as multiples at a time 
+	     boolean newletterstatus = driver.findElement(By.xpath("//input[@id='Newsletter']")).isSelected();
+	     System.out.println("News letter checkbox status :" + newletterstatus);   //true
 	     
 	     
 	     
