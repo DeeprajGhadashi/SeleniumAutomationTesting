@@ -25,7 +25,7 @@ public class HandleBrowsingWindows {
         Set<String> windowIDs = driver.getWindowHandles();
         
         //Approach 1
-        List <String> windowList = new ArrayList(windowIDs);
+       /* List <String> windowList = new ArrayList(windowIDs);
         
         String parentID = windowList.get(0);
         String childID = windowList.get(1);
@@ -39,8 +39,18 @@ public class HandleBrowsingWindows {
         //switch to parent window
         driver.switchTo().window(parentID);
         System.out.println(driver.getTitle());
+        */
         
+        //Approach 2  //looping to handle multiple url title
 
+        for(String winID: windowIDs) {
+        	String title = driver.switchTo().window(winID).getTitle();
+        	
+        	if(title.equals("OrangeHRM")) {
+        		System.out.println(driver.getCurrentUrl());
+        		//some validation on the parent window
+        	}
+        }
 	}
 
 }
