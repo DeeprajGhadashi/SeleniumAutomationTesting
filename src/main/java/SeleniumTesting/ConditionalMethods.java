@@ -26,7 +26,7 @@ public class ConditionalMethods {
 	    // boolean status = driver.findElement(By.xpath("//input[@id='gender-male']")).isEnabled();
 	     //System.out.println("Enable status : " +  status);
 	    
-	     //isSelected
+	     //isSelected()
 	     WebElement male_rb = driver.findElement(By.xpath("//input[@id='gender-male']"));
 	     WebElement female_rb = driver.findElement(By.xpath("//input[@id='gender-female']")); 
 	     
@@ -34,11 +34,20 @@ public class ConditionalMethods {
 	     System.out.println(male_rb.isSelected());   //false
 	     System.out.println(female_rb.isSelected());  //false
 	     
-	     System.out.println("");
+	     //radio buttons you can select only one at a time both can not selects
+	     
+	     System.out.println("After Selecting male...");
 	     male_rb.click();  //select male radio button
 	     
 	     System.out.println(male_rb.isSelected());  //true
 	     System.out.println(female_rb.isSelected());  //false
+	     
+	     System.out.println("After Selecting female...");
+	     female_rb.click();  //select male radio button
+	     
+	     System.out.println(male_rb.isSelected());  //false
+	     System.out.println(female_rb.isSelected());  //true       
+	  
 	     
 	     
 	     
