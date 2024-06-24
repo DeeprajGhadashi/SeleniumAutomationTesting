@@ -35,10 +35,13 @@ public class XpathAxesDemo {
 	   // System.out.println("Ancestor : " + text); 
 	
 	    //Descendant - Selects all descendants (children, grandchildren ,etc.) of the current node
-	    List <WebElement>  descendants = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/descendant::*"));
-	    System.out.println("Number of descendants nodes : " + descendants.size()); //10
+	   // List <WebElement>  descendants = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/descendant::*"));
+	   // System.out.println("Number of descendants nodes : " + descendants.size()); //10
 	
-	
+	    //Following - Selects everything in the document after the closing tag of the current node
+	    List <WebElement>  followingnodes  = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/following::*"));
+	    System.out.println("Number of following nodes : " + followingnodes.size()); // 778 
+	   
 	
 	}
 
