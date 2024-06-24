@@ -31,9 +31,12 @@ public class XpathAxesDemo {
 	    //System.out.println("Number of Child elements : " + childs.size()); //6
 	
 	    //Ancestor - Selects all ancestors (parents, grandparents ,etc.)
-	    String text = driver.findElement(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr")).getText();
-	    System.out.println("Ancestor : " + text); 
+	    //String text = driver.findElement(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr")).getText();
+	   // System.out.println("Ancestor : " + text); 
 	
+	    //Descendant - Selects all descendants (children, grandchildren ,etc.) of the current node
+	    List <WebElement>  descendants = driver.findElements(By.xpath("//a[contains(text(),'L&T')]/ancestor::tr/descendant::*"));
+	    System.out.println("Number of descendants nodes : " + descendants.size()); //10
 	
 	
 	
