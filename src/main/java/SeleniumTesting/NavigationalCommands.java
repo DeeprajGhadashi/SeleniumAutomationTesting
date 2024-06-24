@@ -34,6 +34,8 @@ public class NavigationalCommands {
 		//navigate().forward()
 		driver.navigate().forward();
 		System.out.println(driver.getCurrentUrl()); 
+		
+		driver.navigate().refresh();
 	}
 
 }
