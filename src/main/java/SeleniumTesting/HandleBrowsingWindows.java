@@ -41,7 +41,7 @@ public class HandleBrowsingWindows {
         System.out.println(driver.getTitle());
         */
         
-        //Approach 2  //looping to handle multiple url title
+        //Approach 2  //looping to handle multiple url on title
 
         for(String winID: windowIDs) {
         	String title = driver.switchTo().window(winID).getTitle();
