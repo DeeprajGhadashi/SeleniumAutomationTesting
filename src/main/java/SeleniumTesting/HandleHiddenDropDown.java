@@ -28,10 +28,14 @@ public class HandleHiddenDropDown {
         
         //clicked on dropdown
         driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[6]/div[1]/div[2]/div[1]/div[1]")).click();
-        //Thread.sleep(5000);
+        Thread.sleep(5000);
       
        //Select single option
-        driver.findElement(By.xpath("//span[normalize-space()='Financial Analyst']")).click();
+       // driver.findElement(By.xpath("//span[normalize-space()='Financial Analyst']")).click();
+        
+        //count number of options
+        List <WebElement> options = driver.findElements(By.xpath("//div[@role='listbox']//span"));
+        System.out.println("Number of options:" + options.size());
         
         
 	}
