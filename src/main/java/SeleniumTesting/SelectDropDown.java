@@ -35,8 +35,15 @@ public class SelectDropDown {
         System.out.println("Number of option in a drop down :" + options.size());  //10
         
         //printing the options
+       /*
         for(int i=0; i<options.size(); i++) {
         	System.out.println(options.get(i).getText());;
+        }
+        */
+        
+        //enhanced for loop
+        for(WebElement op:options) {
+        	System.out.println(op.getText());
         }
 	}
 
