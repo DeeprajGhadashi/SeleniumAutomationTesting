@@ -27,13 +27,21 @@ public class HandleAlerts {
        */
         
         //2) confirmation Alert - Ok & Cancel
+      /*
         driver.findElement(By.xpath("//button[normalize-space()='Click for JS Confirm']")).click();
         Thread.sleep(5000);
         
         driver.switchTo().alert().accept(); //close alert using OK button
         //driver.switchTo().alert().dismiss(); //close alert using Cancel button
+       */
         
-
+        //3) Prompt alert - Input box
+        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Prompt']")).click();
+        Thread.sleep(5000);
+        
+        Alert myalert = driver.switchTo().alert(); 
+        myalert.sendKeys("Welcome Deepraj");
+        myalert.accept();
 	}
 
 }
