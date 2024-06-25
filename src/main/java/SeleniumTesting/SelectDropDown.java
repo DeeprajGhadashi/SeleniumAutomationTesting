@@ -1,6 +1,7 @@
 package SeleniumTesting;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +29,15 @@ public class SelectDropDown {
         //drpCountry.selectByValue("Japan");
         //drpCountry.selectByIndex(2);
 
+        //capture the option from the drop down
+        
+        List<WebElement> options = drpCountry.getOptions();
+        System.out.println("Number of option in a drop down :" + options.size());  //10
+        
+        //printing the options
+        for(int i=0; i<options.size(); i++) {
+        	System.out.println(options.get(i).getText());;
+        }
 	}
 
 }
