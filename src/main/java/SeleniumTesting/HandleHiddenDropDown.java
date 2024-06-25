@@ -35,9 +35,12 @@ public class HandleHiddenDropDown {
         
         //count number of options
         List <WebElement> options = driver.findElements(By.xpath("//div[@role='listbox']//span"));
-        System.out.println("Number of options:" + options.size());
+        System.out.println("Number of options:" + options.size());  //29
         
-        
+        //printing options
+        for(WebElement op:options) {
+        	System.out.println(op.getText());
+        }
 	}
 
 }
